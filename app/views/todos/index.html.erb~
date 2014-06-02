@@ -4,7 +4,6 @@
     <div class="span4">
       <h1>Shared Todo App</h1>
       <hr>
-      <p>All your todos here</p>
         <%= form_tag("/todos/add", :method=>"post") do %>
           <%= text_field_tag(:todo_text) %>
           <%= submit_tag("Add todo", :class=>"btn") %>
@@ -22,7 +21,7 @@
           <strong><%= flash[:success] %></strong>
         </div>
       <% end %>
-
+      <p>All your Todos here</p>
       <div class="well">
         <ul>
           <% @todo_items.each do |t| %>
